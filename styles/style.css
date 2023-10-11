@@ -1,0 +1,58 @@
+html {
+    font-size: 10px;
+    font-family: 'Gabarito', sans-serif;
+    background-color: #74afe6;
+}
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #749ce6;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    position: absolute;
+    left: 400px;        
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #74afe6;
+    text-shadow: 2px 2px 1px black;
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 20px 0;
+    color: #1d4972;
+    text-shadow: 2px 2px 1px darkslategrey;
+    font-size: 50px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 30px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
