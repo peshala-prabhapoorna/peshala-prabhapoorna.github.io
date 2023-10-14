@@ -6,7 +6,7 @@ btn.addEventListener('click', () => {
     } else {
         const storedContactNo = localStorage.getItem("user-contact-number");
         const link = document.getElementById("link");
-        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${storedContactNo}`;
+        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Contact%20Number%20-%20${storedContactNo}`;
     }
 });
 
@@ -17,7 +17,7 @@ function setUserContactNo() {
     } else {
         localStorage.setItem("user-contact-number", userContactNo);
         const link = document.getElementById("link");
-        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${userContactNo}`;
+        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Contact%20Number%20-%20${userContactNo}`;
     }
 }
 
