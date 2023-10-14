@@ -25,18 +25,18 @@ button {
 h1 {
     margin: 0;
     padding: 20px 0;
-    color: #74afe6;
-    text-shadow: 2px 2px 1px black;
-    font-size: 60px;
+    color: #1d4972;
+    text-shadow: 2px 2px 1px darkslategrey;
+    font-size: 50px;
     text-align: center;
 }
 
 h2 {
     margin: 0;
     padding: 20px 0;
-    color: #1d4972;
-    text-shadow: 2px 2px 1px darkslategrey;
-    font-size: 50px;
+    color: #74afe6;
+    text-shadow: 2px 2px 1px black;
+    font-size: 45px;
     text-align: center;
 }
 
