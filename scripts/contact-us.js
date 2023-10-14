@@ -1,23 +1,23 @@
 const btn = document.getElementById("btn");
 
 btn.addEventListener('click', () => {
-    if (!localStorage.getItem("user-email")) {
-        setUserEmail();
+    if (!localStorage.getItem("user-contact-number")) {
+        setUserContactNo();
     } else {
-        const storedEmail = localStorage.getItem("user-email");
+        const storedContactNo = localStorage.getItem("user-contact-number");
         const link = document.getElementById("link");
-        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${storedEmail}`;
+        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${storedContactNo}`;
     }
 });
 
-function setUserEmail() {
-    let userEmail = prompt("Please enter your ugly email.");
-    if (!userEmail) {
-        setUserEmail();
+function setUserContactNo() {
+    let userContactNo = prompt("Please enter your useless phone number.");
+    if (!userContactNo) {
+        setUserContactNo();
     } else {
-        localStorage.setItem("user-email", userEmail);
+        localStorage.setItem("user-contact-number", userContactNo);
         const link = document.getElementById("link");
-        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${userEmail}`;
+        link.href = `mailto:peshalaprabhapoorna@gmail.com?subject=Want%20to%20find%20a%20boarding%20place&body=Email-${userContactNo}`;
     }
 }
 
