@@ -1,34 +1,30 @@
-<!doctype html>
-<html lang="en-US">
-    <head>
+<!DOCTYPE html><html lang="en-US"><head>
         <title>Board In Ruhuna</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
 
-        <meta name="author" content="Peshala Prabhapoorna" />
-        <meta name="description" 
-            content="Perfect place to find a place to board in Matara. Our team is commited to 
+        <meta name="author" content="Peshala Prabhapoorna">
+        <meta name="description" content="Perfect place to find a place to board in Matara. Our team is commited to 
             making lives of students and professionals who come to Matara for work or education 
             esier, by finding living quaters for them. Find places to board, rent and live in 
-            Matara." />
+            Matara.">
 
         <!--open graph protocol-->
-        <meta property="og:image" content="images/board_favicon.png" />
-        <meta property="og:description" 
-            content="Perfect place to find a place to board in Matara. Our team is commited to 
+        <meta property="og:image" content="images/board_favicon.png">
+        <meta property="og:description" content="Perfect place to find a place to board in Matara. Our team is commited to 
             making lives of students and professionals who come to Matara for work or education 
-            esier, by finding living quaters for them." />
-        <meta property="og:title" content="Board in Ruhuna" />
+            esier, by finding living quaters for them.">
+        <meta property="og:title" content="Board in Ruhuna">
         <!--css-->
-        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet">
         <!--google fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito&amp;display=swap" rel="stylesheet">
         <!--favicon-->
-        <link rel="icon" href="images/board_favicon.png" type="image/x-icon" />
+        <link rel="icon" href="images/board_favicon.png" type="image/x-icon">
         <!--javascript-->
-        <script src="scripts/main.js" defer></script>
+        <script src="scripts/main.js" defer=""></script>
     </head>
     <body>
         <nav>
@@ -40,7 +36,7 @@
         </nav>
         <h1>Looking to Board in Matara?</h1>
         <button>Change user</button>
-        <img src="images/matara_edited.png" alt="charger icon" height="550" width="752" />
+        <img src="images/matara_edited.png" alt="charger icon" height="550" width="752">
         <p>We all have been there, looking for a place to stay, in a city that we are strangers to.
             Our team wanted the juniors that followed us to have an easier time finding a place to 
             stay, and as a result 'Board in Ruhuna' project was started.
@@ -71,5 +67,32 @@
             <li>If the ownsers don't want the hassle of listing the rooms, they can just send the pictures
                 and info to the admins through messages.</li>
         </ul>
-    </body>
-</html>
+    
+<script>(function () {
+    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    var url = protocol + '//' + window.location.host + '/_trunk/ws';
+    var poll_interval = 5000;
+    var reload_upon_connect = () => {
+        window.setTimeout(
+            () => {
+                // when we successfully reconnect, we'll force a
+                // reload (since we presumably lost connection to
+                // trunk due to it being killed, so it will have
+                // rebuilt on restart)
+                var ws = new WebSocket(url);
+                ws.onopen = () => window.location.reload();
+                ws.onclose = reload_upon_connect;
+            },
+            poll_interval);
+    };
+
+    var ws = new WebSocket(url);
+    ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.reload) {
+            window.location.reload();
+        }
+    };
+    ws.onclose = reload_upon_connect;
+})()
+</script></body></html>

@@ -56,3 +56,42 @@ li {
     line-height: 1.1;
     letter-spacing: 1px;
 }
+
+nav {
+    height: 50px;
+    background-color: #1d4972;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+  }
+  
+  nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+    font-size: 2rem;
+    color: #749ce6;
+  }
+  
+  nav a {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 2em;
+  }
+  
