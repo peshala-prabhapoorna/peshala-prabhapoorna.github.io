@@ -25,6 +25,15 @@ h1 {
   text-align: center;
 }
 
+li {
+  font-size: 15px;
+  line-height: 35px;
+}
+
+a {
+  color: black;
+}
+
 nav {
   height: 50px;
   background-color: #1d4972;

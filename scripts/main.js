@@ -5,8 +5,13 @@ myImage.onclick = () => {
     if (mySrc === "images/matara_edited.png") {
         myImage.setAttribute("src",
         "images/logos.png");
+        myImage.setAttribute("alt",
+        "logos of universities in Matara");
     } else {
-        myImage.setAttribute("src", "images/matara_edited.png");
+        myImage.setAttribute("src", 
+        "images/matara_edited.png");
+        myImage.setAttribute("alt",
+        "map of Matara city")
     }
 };
 
